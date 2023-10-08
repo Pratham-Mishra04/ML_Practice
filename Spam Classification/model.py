@@ -80,6 +80,6 @@ predictions = etc.predict(X_test)
 print("Classification Report:\n", classification_report(y_test, predictions))
 
 conf_matrix = confusion_matrix(y_test, predictions)
-conf_df = pd.DataFrame(conf_matrix, index=['Actual 0', 'Actual 1'], columns=['Predicted 0', 'Predicted 1'])
+conf_df = pd.DataFrame(conf_matrix, index=['Actual HAM', 'Actual SPAM'], columns=['Predicted HAM', 'Predicted SPAM'])
 
 print("Confusion Matrix:\n", conf_df)
